@@ -14,9 +14,33 @@ img {
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
-body {
-//  background-image:url(<%=asset_path "ocean.png"%>);
-  background-image:url("ocean.png");
+body.users-index {
+  background-image:url(<%= asset_path "ocean.png"%>);
+}
+
+body.user-new {
+  background-image: url(<%= asset_path "beach.png"%>);
+}
+
+body.user-show {
+  background-image: url(<%= asset_path "green_hills.png"%>);
+}
+
+body.sessions-new {
+  background-image: url(<%= asset_path "ocean.png"%>);
+}
+body.registrations-new {
+   background-image: url(<%= asset_path "ocean.png"%>);
+}
+body.visitors-index {
+  background-image: url(<%= asset_path "green_hills_water.png"%>);
+}
+body.visitors-show {
+  background-image: url(<%= asset_path "green_hills.png"%>);
+}
+
+body.visitors-edit {
+  background-image: url(<%= asset_path "ocean.png"%>);
 }
 
 .column {
@@ -34,16 +58,24 @@ body {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-lg;
-  }
+}
+.form-group {
+  line-height:16px;
+  margin: 0;
+  padding: 5px 0 0 0;
+}
+
+
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
   @extend .container;
   background-color: #eee;
-  padding-bottom: 80px;
+  padding-bottom: 8px;
   width: 100%;
   margin-top: 51px; // accommodate the navbar
-  }
+  padding-left: 36px;
+}
 section {
   @extend .row;
   margin-top: 20px;
@@ -61,6 +93,7 @@ section {
   @extend .well;
   @extend .well-lg;
   padding-bottom: 40px;
+  padding-left: 18px;
 }
 .authform .right {
   float: right !important;
@@ -71,6 +104,19 @@ section {
 }
 .authform fieldset {
   @extend .well;
+}
+
+.authform.checkbox {
+  padding: 0;
+  margin-right:0;
+  margin-left:0;
+}
+.authform.checkbox.label {
+  text-align: left;
+}
+.checkbox.input#user_remember_me{
+  text-align: left;
+  margin-left: 0px;
 }
 #error_explanation {
   @extend .alert;
@@ -84,3 +130,14 @@ section {
   @extend .btn-primary;
   @extend .btn-xs;
 }
+
+input.checkbox {
+  padding-left: 20px;
+  margin-left: 14px;
+}
+
+input#user_remember_me {
+  text-align: left;
+  margin-left:2px;
+}
+
