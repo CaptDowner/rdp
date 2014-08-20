@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     authorize @user
     if @user.update_attributes(secure_params)
-      redirect_to users_path, :notice => "User updated."
+      redirect_to users_path, :notice => "You updated your account successfully."
     else
       redirect_to users_path, :alert => "Unable to update user."
     end
@@ -29,6 +29,13 @@ class UsersController < ApplicationController
     redirect_to users_path, :notice => "User deleted."
   end
 
+  def authorize(user)
+    true
+  end
+
+  def verify_authorized
+    true
+  end
   private
 
   def secure_params
