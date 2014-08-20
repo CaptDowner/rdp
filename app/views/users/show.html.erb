@@ -1,3 +1,7 @@
 <h3>User</h3>
-<p>Name: <%= @user.name if @user.name %></p>
-<p>Email: <%= @user.email if @user.email %></p>
+<div id='users-tbl'>
+<table>
+  <tr><td><input class='button-xs1' name='name' value='Name:' /></td><td><%= @user.name if @user.name %></td></tr>
+  <tr><td><input class='button-xs1' name='email' value='Email:' /></td><td><%= @user.email if @user.email %></td></tr>
+</table>
+</div> <!-- end users-tbl -->
