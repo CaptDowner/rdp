@@ -4,14 +4,13 @@
     <h3>Sign up</h3>
     <%= devise_error_messages! %>
     <div class="form-group">
-     <table>
-<tr><td class='lbl'><%= f.label :name %>:</td><td><%= f.text_field :name, :autofocus => true, class: 'form-control' %></td></tr>
-<tr><td class='lbl'><%= f.label :email %>:</td><td><%= f.email_field :email, class: 'form-control' %></td></tr>
- <tr><td class='lbl'><%= f.label :password %>:</td><td><%= f.password_field :password, class: 'form-control' %></td></tr>
- <tr><td class='lbl'><%= f.label :password_confirmation, 'Confirm Password:' %></td><td><%= f.password_field :password_confirmation, class: 'form-control' %></td></tr>
-
- <tr><td></td><td><%= f.submit 'Sign up', :class => 'button' %></td></tr>
-</table>
+      <table>
+        <tr><td class='lbl'><%= f.label :name %>:</td><td><%= f.text_field :name, :autofocus => true, class: 'form-control' %></td></tr>
+        <tr><td class='lbl'><%= f.label :email %>:</td><td><%= f.email_field :email, class: 'form-control' %></td></tr>
+        <tr><td class='lbl'><%= f.label :password %>:</td><td><%= f.password_field :password, class: 'form-control' %></td></tr>
+        <tr><td class='lbl'><%= f.label :password_confirmation, 'Confirm Password:' %></td><td><%= f.password_field :password_confirmation, class: 'form-control' %></td></tr>
+        <tr><td></td><td><%= f.submit 'Sign up', :class => 'button' %></td></tr>
+      </table>
     </div>
   <% end %>
 </div>
