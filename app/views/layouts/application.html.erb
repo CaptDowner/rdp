@@ -7,7 +7,18 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-
+    <style type="text/css">
+  hr.bline{
+  color: black;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;
+  background-color:#000000;
+//  padding-top: 6px;
+  height: 1px;
+}
+</style>
   </head>
   <body class="<%=controller_name%>-<%=action_name%>">
     <header>
@@ -15,7 +26,7 @@
     </header>
     <!--    <main role="main"> -->
        <%= render 'layouts/messages' %>
-       <br>
+       <br><br>
        <%= yield %>
        <!--    </main> -->
   </body>
